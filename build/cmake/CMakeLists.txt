@@ -26,7 +26,7 @@ mark_as_advanced(LZ4_VERSION_STRING LZ4_VERSION_MAJOR LZ4_VERSION_MINOR LZ4_VERS
 
 project(LZ4 VERSION ${LZ4_VERSION_STRING} LANGUAGES C)
 
-option(LZ4_BUILD_CLI "Build lz4 program" ON)
+option(LZ4_BUILD_CLI "Build lz4 program" OFF)
 option(LZ4_BUILD_LEGACY_LZ4C "Build lz4c program with legacy argument support" ON)
 
 # If LZ4 is being bundled in another project, we don't want to
