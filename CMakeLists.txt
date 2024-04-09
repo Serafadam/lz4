@@ -12,7 +12,7 @@
 
 cmake_minimum_required(VERSION 3.5)
 
-set(LZ4_TOP_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/../..")
+set(LZ4_TOP_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}")
 
 # Parse version information
 file(STRINGS "${LZ4_TOP_SOURCE_DIR}/lib/lz4.h" LZ4_VERSION_MAJOR REGEX "^ *# *define +LZ4_VERSION_MAJOR +([0-9]+).*$")
@@ -211,7 +211,7 @@ if(NOT LZ4_BUNDLED_MODE)
 
   set(LZ4_PKG_INSTALLDIR "${CMAKE_INSTALL_LIBDIR}/cmake/lz4")
   configure_package_config_file(
-    "${CMAKE_CURRENT_LIST_DIR}/lz4Config.cmake.in"
+    "${CMAKE_CURRENT_LIST_DIR}/build/cmake/lz4Config.cmake.in"
     "${CMAKE_CURRENT_BINARY_DIR}/lz4Config.cmake"
     INSTALL_DESTINATION ${LZ4_PKG_INSTALLDIR})
   export(EXPORT lz4Targets
