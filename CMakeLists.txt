@@ -168,8 +168,7 @@ foreach (flag
     -Wstrict-prototypes
     -Wpointer-arith
 
-    # MSVC-style
-    /W4)
+  )
   # Because https://gcc.gnu.org/wiki/FAQ#wnowarning
   string(REGEX REPLACE "\\-Wno\\-(.+)" "-W\\1" flag_to_test "${flag}")
   string(REGEX REPLACE "[^a-zA-Z0-9]+" "_" test_name "CFLAG_${flag_to_test}")
